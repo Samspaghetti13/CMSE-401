@@ -4,9 +4,10 @@ This project involves the implementation of a deep learning model for image dete
 
 # Installation
 
-1. Download model.py, run.sb, your dataset and images folder to the HPCC
+1. Download the folder to the HPCC
 2. Open a terminal in the HPCC
 3. Navigate to the directory
+4. Unzip the Dataset.csv in Data_Entry_2017_v2020.zip
 5. Type "sbatch run.sb"
 
 This should load all of the modules and download the libraries needed for the python file to run.

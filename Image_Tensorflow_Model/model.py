@@ -96,8 +96,8 @@ def predict_on_test_set(model, test_indices, test_labels, image_dir, batch_size=
         
 
 def main():
-    data_path = "INSERT DATAPATH HERE"
-    images_folder = 'INSERT IMAGE FOLDER PATH HERE'
+    data_path = "Data_Entry_2017_v2020.csv"
+    images_folder = 'images'
     batch_size = 32 * strategy.num_replicas_in_sync  # Adjust batch size based on available GPUs
     epochs = 10
     img_size = (160, 160)
@@ -125,7 +125,7 @@ def main():
     model = create_model(input_shape=(*img_size, 3), num_classes=1)
     
     checkpoint = ModelCheckpoint(
-        'INSERT CHECKPOINT NAME HERE',
+        'models/chest_xray_model.h5',
         monitor='val_auc',
         save_best_only=True,
         mode='max',
